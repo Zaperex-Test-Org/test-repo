@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Log Issue Payload
+        if: secrets.GITHUB_TOKEN == github.token
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OTHER_TOKEN: ${{ github.token }}
           PAYLOAD: ${{ github.event.issue.payload }}
-        if: GITHUB_TOKEN == OTHER_TOKEN
         run: |
           echo "$PAYLOAD";
           echo "$GITHUB_TOKEN";
