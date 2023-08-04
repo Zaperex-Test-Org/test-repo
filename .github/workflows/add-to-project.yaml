@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Log Issue Payload
-        if: secrets.GITHUB_TOKEN == github.token
+        if: ${{ secrets.GITHUB_TOKEN }} == ${{ github.token }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OTHER_TOKEN: ${{ github.token }}
