@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: github/issue-labeler@v3.2
         with:
-          configuration-path: ./github/labeler.yaml
-          enable-versioned-regex: 0
+          configuration-path: ./github/labeler.yml
           repo-token: ${{ github.token }}
+          enable-versioned-regex: 0
