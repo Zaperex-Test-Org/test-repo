@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/add-to-project@v0.5.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           project-url: https://github.com/users/Zaperex/projects/2
           labeled: status/triage
+          github-token: ${{ secrets.GITHUB_TOKEN }}
