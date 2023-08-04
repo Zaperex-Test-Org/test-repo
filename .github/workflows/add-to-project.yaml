@@ -4,9 +4,6 @@ on:
   issues:
     types:
       - labeled
-permissions:
-  repository-projects: write
-  issues: read
 jobs:
   add-to-project:
     runs-on: ubuntu-latest
