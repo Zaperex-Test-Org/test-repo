@@ -11,19 +11,9 @@ jobs:
   add-to-project:
     runs-on: ubuntu-latest
     steps:
-      - name: Log Issue Payload
-        if: ${{ secrets.GITHUB_TOKEN }} == ${{ github.token }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OTHER_TOKEN: ${{ github.token }}
-          PAYLOAD: ${{ github.event.issue.payload }}
-        run: |
-          echo "$PAYLOAD";
-          echo "$GITHUB_TOKEN";
-          echo "$OTHER_TOKEN";
       - name: Add issue to project
         uses: actions/add-to-project@v0.5.0
         with:
           project-url: https://github.com/users/Zaperex/projects/2
-          github-token: ${{ github.token }}
+          github-token: ${{ secrets.PRIVATE_TOKEN }}
           labeled: status/triage
