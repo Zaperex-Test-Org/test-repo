@@ -14,5 +14,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           project-url: https://github.com/users/Zaperex/projects/2
-          github-token: ${{ env.GITHUB_TOKEN }}
           labeled: status/triage
