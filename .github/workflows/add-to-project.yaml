@@ -11,14 +11,16 @@ jobs:
   add-to-project:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate token
+      - if: ${{ github.event.label.name == 'status/triage' }}
+        name: Generate token
         id: generate_token
         uses: tibdex/github-app-token@v1.7.0
         with:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
-      - name: Get project data
+      - if: ${{ github.event.label.name == 'status/triage' }}
+        name: Get project data
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
           ORGANIZATION: Zaperex-Test-Org
@@ -33,7 +35,8 @@ jobs:
               }
             }' -f org=$ORGANIZATION -F number=$PROJECT_NUMBER > project_data.json
           echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
-      - name: Add PR to project
+      - if: ${{ github.event.label.name == 'status/triage' }}
+        name: Add PR to project
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
           ISSUE_ID: ${{ github.event.issue.node_id }}
