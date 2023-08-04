@@ -11,11 +11,17 @@ jobs:
   add-to-project:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "${{ github.event.issue.payload }}";
-          echo "${{github.token}}"
-          echo "${{secrets.GITHUB_TOKEN}}"
-      - uses: actions/add-to-project@v0.5.0
+      - name: Log Issue Payload
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OTHER_TOKEN: ${{ github.token }}
+          PAYLOAD: ${{ github.event.issue.payload }}
+        run: |
+          echo "$PAYLOAD";
+          echo "$GITHUB_TOKEN";
+          echo "$OTHER_TOKEN";
+      - name: Add issue to project
+        uses: actions/add-to-project@v0.5.0
         with:
           project-url: https://github.com/users/Zaperex/projects/2
           github-token: ${{ github.token }}
