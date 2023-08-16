@@ -11,7 +11,7 @@ metadata:
   annotations:
     github.com/project-slug: Zaperex-Test-Org/test-repo
     backstage.io/kubernetes-namespace: rhdh-2
-    backstage.io/kubernetes-id: rhdh-k8s-plugin
+    backstage.io/kubernetes-id: developer-hub
 spec:
   type: website
   lifecycle: unknown
