@@ -13,7 +13,7 @@ metadata:
     backstage.io/kubernetes-namespace: rhdh-2
     backstage.io/kubernetes-id: developer-hub
     backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=developer-hub
-    janus-idp.io/tekton-enabled: true
+    janus-idp.io/tekton-enabled: 'true'
 spec:
   type: website
   lifecycle: unknown
