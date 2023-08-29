@@ -13,8 +13,8 @@ metadata:
     backstage.io/kubernetes-id: developer-hub
     janus-idp.io/tekton-enabled: 'true'
     # nexus-repository-manager/docker.image-name: nexus-docker/nexus3
-    # nexus-repository-manager/docker.image-name: janus-idp/showcase
-    nexus-repository-manager/config.title: All Images
+    nexus-repository-manager/docker.image-name: janus-idp/showcase
+    nexus-repository-manager/config.title: Janus Showcase Images
     # nexus-repository-manager/docker.image-tag: latest
 spec:
   type: website
