@@ -17,6 +17,7 @@ metadata:
     # nexus-repository-manager/config.title: Janus Showcase Images
     # nexus-repository-manager/docker.image-tag: latest
     azure-container-registry/repository-name: hello-world
+    jfrog-artifactory/image-name: test
 spec:
   type: website
   lifecycle: unknown
