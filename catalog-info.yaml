@@ -18,6 +18,7 @@ metadata:
     # nexus-repository-manager/docker.image-tag: latest
     azure-container-registry/repository-name: hello-world
     jfrog-artifactory/image-name: hello-world
+    argocd/app-name: guestbook
 spec:
   type: website
   lifecycle: unknown
