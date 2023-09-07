@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: test_user
+spec:
+  profile:
+    displayName: Foo Bar
+  memberOf: []
