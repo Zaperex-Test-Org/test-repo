@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
- name: Zaperex
+  name: Zaperex
 spec:
- profile:
- displayName: Frank Kong # Can be any arbitrary value, will default to metadata.name value if not inserted.
- memberOf: []
+  profile:
+    displayName: Frank Kong # Can be any arbitrary value, will default to metadata.name value if not inserted.
+  memberOf: []
