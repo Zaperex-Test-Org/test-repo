@@ -1,0 +1,53 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: create-argocd-resource
+  title: Create ArgoCD Resource
+  description: Create ArgoCD resource into an ArgoCD instance
+  tags:
+    - create
+spec:
+  owner: janus-authors
+  system: janus-idp
+  type: service
+
+  parameters:
+    - title: Provide information about the ArgoCD instance
+      required:
+        - appName
+        - argoInstance
+        - namespace
+        - repoUrl
+        - path
+      properties:
+        appName:
+          title: Application name
+          type: string
+          description: Name of the application
+        argoInstance:
+          title: ArgoCD instance
+          type: string
+          description: Name of the ArgoCD instance
+        namespace:
+          title: Namespace
+          type: string
+          description: Namespace of the application
+        repoUrl:
+          title: Repository URL
+          type: string
+          description: URL of the repository
+        path:
+          title: Path
+          type: string
+          description: Path to the application
+      steps:
+        id: create-argocd-resources
+        name: Create ArgoCD Resources
+        action: argocd:create-resources
+        input:
+          appName: ${{ parameters.appName }}
+          argoInstance: ${{ parameters.argoInstance }}
+          namespace: ${{ parameters.namespace }}
+          repoUrl: ${{ steps.publish.output.repoUrl }}
+          labelValue: ${{ parameters.name }}
+          path: ${{ parameters.path }}
