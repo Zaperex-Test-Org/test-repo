@@ -1,5 +1,5 @@
-apiVersion: backstage.io/v1alpha1
-kind: Component
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
 metadata:
   name: create-argocd-resource
   title: Create ArgoCD Resource
