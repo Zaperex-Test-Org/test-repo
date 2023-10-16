@@ -41,13 +41,13 @@ spec:
           type: string
           description: Path to the application
   steps:
-    id: create-argocd-resources
-    name: Create ArgoCD Resources
-    action: argocd:create-resources
-    input:
-      appName: ${{ parameters.appName }}
-      argoInstance: ${{ parameters.argoInstance }}
-      namespace: ${{ parameters.namespace }}
-      repoUrl: ${{ steps.publish.output.repoUrl }}
-      labelValue: ${{ parameters.name }}
-      path: ${{ parameters.path }}
+    - id: create-argocd-resources
+      name: Create ArgoCD Resources
+      action: argocd:create-resources
+      input:
+        appName: ${{ parameters.appName }}
+        argoInstance: ${{ parameters.argoInstance }}
+        namespace: ${{ parameters.namespace }}
+        repoUrl: ${{ steps.publish.output.repoUrl }}
+        labelValue: ${{ parameters.name }}
+        path: ${{ parameters.path }}
