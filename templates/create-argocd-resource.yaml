@@ -48,6 +48,6 @@ spec:
         appName: ${{ parameters.appName }}
         argoInstance: ${{ parameters.argoInstance }}
         namespace: ${{ parameters.namespace }}
-        repoUrl: ${{ steps.publish.output.repoUrl }}
+        repoUrl: ${{ parameters.repoUrl }}
         labelValue: ${{ parameters.name }}
         path: ${{ parameters.path }}
