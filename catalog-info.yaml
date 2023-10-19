@@ -19,7 +19,7 @@ metadata:
     azure-container-registry/repository-name: hello-world
     jfrog-artifactory/image-name: hello-world
     argocd/app-name: guestbook
-    backstage.io/techdocs-ref: url:https://github.com/Zaperex-Test-Org/test-repo
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: website
   lifecycle: unknown
