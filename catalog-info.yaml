@@ -19,7 +19,7 @@ metadata:
     azure-container-registry/repository-name: hello-world
     jfrog-artifactory/image-name: hello-world
     argocd/app-name: guestbook
-    backstage.io/techdocs-ref: https://github.com/janus-idp/backstage-showcase/tree/main/docs
+    backstage.io/techdocs-ref: url:https://github.com/janus-idp/backstage-showcase/tree/main/docs
 spec:
   type: website
   lifecycle: unknown
