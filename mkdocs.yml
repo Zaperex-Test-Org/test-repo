@@ -1,0 +1,15 @@
+site_name: test-repo
+site_description: "Test Documentation"
+repo_url: https://github.com/Zaperex-Test-Org/test-repo
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+# Note for content editors, edit only the section below
+nav:
+  - Onboard a developer to OpenShift: index.md
+  - Application Migration:
+      - Migration Process Overview: application-migration/migration-process-overview.md
+      - Migration Process Steps: application-migration/migration-process-steps.md
+      - Learning Path for Developers: application-migration/learning-path-for-developers.md
