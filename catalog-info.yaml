@@ -20,6 +20,7 @@ metadata:
     jfrog-artifactory/image-name: hello-world
     argocd/app-name: guestbook
     backstage.io/techdocs-ref: dir:.
+    quay.io/repository-slug: rh-ee-frkong/rhpib-testing
 spec:
   type: website
   lifecycle: unknown
